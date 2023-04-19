@@ -1,0 +1,67 @@
+<!-- Requirement: Have a folder structure that meets the MVC paradigm -->
+<!-- HTML displayed on the 'view' folder -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Centennial Village HOA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Remember: The strylesheet is linked from a different folder -->
+<!-- '..' is used  indicate its origin -->
+    <link rel="stylesheet" href="../public/style.css">
+<!-- Requirement: Use at least one new library, package, or technology that we haven’t discussed. -->
+<!-- Slick Carousel Documentation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Centennial Village</h1>
+      <h2> HOA </h2>
+    </header>
+    <main>
+      <section id="photos"> 
+        <h1>
+          Photos
+        </h1>
+        <div class="gallery-container">
+          <div class="gallery">
+          </div>
+        </div>
+      </section>
+      <h3 id="contactBar">Contact us </h3>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required> <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <section>
+<!-- Section made to keep all the java script documents together -->
+      <script id="gallery-template" type="text/x-handlebars-template">
+        {{#each images}}
+        <div class="gallery-item">
+          <img src="{{this.url}}" alt="{{this.alt}}">
+        </div>
+        {{/each}}
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick Carousel Documentation -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<!-- Requirement: Use Handlebars.js as the template engine. -->
+      <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+      <script src= "../public/script.js"></script>
+      <script src= "../models/index.js"></script>
+      <script src= "../routes/database.js"></script>
+    </section>
+    <footer>
+      <h3> created by Fl🌺ra Bernard😊</h3>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+/* Requirement: Have a folder structure that meets the MVC paradigm 
+Stylesheet dislayed on the public folder */
+* {
+    background-color: rgb(204, 211, 208);
+}
+
+header, 
+footer {
+    text-align: center;
+}
+
+#photos {
+    text-align: center;
+  
+}
+.gallery-container {
+    max-width: 100vh;
+    margin: 0 auto;
+  }
+
+  .gallery-item img {
+    max-height: 100vh;
+    
+  }
+  
+  
+  .slick-list {
+    margin: 0 auto;
+  }
